@@ -4,11 +4,11 @@ This library is a C port of the implementation of the method for computing the m
 
 The density function of the Bingham distribution is given by
 
-![the density function of the Bingham distribution](http://i1149.photobucket.com/albums/o595/yiwanjiangyou/densOrg_zps7g3u8lge.png?t=1479611442)
+![the density function of the Bingham distribution](http://latex.codecogs.com/gif.latex?f(\bm{x}&space;|&space;B)&space;=&space;\left.{\exp&space;\left(&space;\sum_{i,j=1}^3B_{ij}x_ix_j&space;\right)}&space;\middle&space;/&space;{\int_{\mathbb{S}^{2}}&space;\exp&space;\left(&space;\sum_{i,j=1}^3B_{ij}x_ix_j&space;\right)&space;\,&space;\md&space;\bm{x}&space;}\right.,&space;\quad&space;\bm{x}\in&space;\mathbb{S}^2)
 
 This library provides a fast way to calculate its moment function
 
-![moment function](http://i1149.photobucket.com/albums/o595/yiwanjiangyou/moments_zpspkn9etgi.png?t=1479611376)
+![moment function](http://latex.codecogs.com/gif.latex?\langle&space;x_1^{n_1}x_2^{n_2}x_3^{n_3}&space;\rangle=\int_{\mathbb{S}^{2}}&space;f(\bm{x}&space;|&space;B)&space;x_1^{n_1}x_2^{n_2}x_3^{n_3}\md\bm{x})
 
 up to 4th order.
 The calculation is done by piecewise rational approximation, where interpolation and Gaussian integrals are utilized. It is shown by numerical test that an accuracy of 5e−8 is attained remarkably faster than direct numerical quadrature.
